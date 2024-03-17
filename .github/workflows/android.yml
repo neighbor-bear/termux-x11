@@ -4,18 +4,21 @@ on:
   push:
     branches:
       - master
-      - android-10
   pull_request:
     branches:
       - master
-      - android-10
 
 jobs:
   testing:
     runs-on: ubuntu-latest
     steps:
     - name: Clone repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v2
     - name: Execute tests
       run: |
-        ./gradlew test
+        ./gradlew test --stacktrace
+    - name: Android Integration Test
+      uses: ReactiveCircus/android-emulator-runner@v2.19.0
+      with:
+          api-level: 28
+          script: ./gradlew test
