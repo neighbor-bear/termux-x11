@@ -2,170 +2,170 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceCategory android:key="output" android:title="Output">
         <ListPreference
-            android:title="Display resolution mode"
+            android:title="显示分辨率模式"
             android:key="displayResolutionMode"
             android:defaultValue="native"
             android:entries="@array/displayResolutionVariants"
             android:entryValues="@array/displayResolutionVariants" />
 
         <SeekBarPreference
-            android:title="Display scale, %"
+            android:title="显示比例, %"
             android:key="displayScale"
             android:max="200"
             android:defaultValue="100" />
 
         <ListPreference
-            android:title="Display resolution"
+            android:title="显示分辨率"
             android:key="displayResolutionExact"
             android:defaultValue="1280x1024"
             android:entries="@array/displayResolution"
             android:entryValues="@array/displayResolution" />
 
         <EditTextPreference
-            android:title="Display resolution"
+            android:title="显示分辨率"
             android:key="displayResolutionCustom"
             android:defaultValue="1280x1024"
-            android:summary="Example: 1280x1024" />
+            android:summary="例子: 1280x1024" />
 
         <SwitchPreferenceCompat
-            android:title="Stretch to fit display"
+            android:title="拉伸以适应屏幕"
             android:defaultValue="false"
             android:key="displayStretch" />
 
         <SwitchPreferenceCompat
-            android:title="Reseed screen while soft keyboard is open"
-            android:summary="The screen size will be adjusted while Soft Keyboard is open."
+            android:title="软键盘打开时重设屏幕布局"
+            android:summary="当软键盘打开时，屏幕尺寸将进行调整。"
             android:defaultValue="true"
             android:key="Reseed" />
 
         <SwitchPreferenceCompat
-            android:title="PIP mode"
-            android:summary="Show app in picture-in-picture mode when home button or recents button is pressed"
+            android:title="画中画模式"
+            android:summary="当按下主页按钮或最近任务按钮时，以画中画模式显示应用"
             android:defaultValue="false"
             android:key="PIP" />
 
         <SwitchPreferenceCompat
-            android:title="Fullscreen on device display"
-            android:summary="Toggles immersive mode in your device display"
+            android:title="设备全屏显示"
+            android:summary="将你的设备屏幕显示切换成沉浸式模式"
             android:defaultValue="false"
             android:key="fullscreen" />
 
         <SwitchPreferenceCompat
-            android:title="Force landscape orientation"
+            android:title="强制横屏"
             android:defaultValue="false"
             android:key="forceLandscape" />
 
         <SwitchPreferenceCompat
-            android:title="Hide display cutout (if any)"
+            android:title="隐藏屏幕刘海（如果有）"
             android:defaultValue="false"
             android:key="hideCutout" />
         
         <SwitchPreferenceCompat
-	        android:title="Keep Screen On"
+	        android:title="保持屏幕常亮"
             android:defaultValue="true"
             android:key="keepScreenOn" />
     </PreferenceCategory>
     <PreferenceCategory android:key="pointer" android:title="Pointer">
         <ListPreference
-            android:title="Touchscreen input mode"
+            android:title="触屏输入模式"
             android:key="touchMode"
             android:defaultValue="1"
             android:entries="@array/touchscreenInputModesEntries"
             android:entryValues="@array/touchscreenInputModesValues" />
 
         <SwitchPreferenceCompat
-            android:title="Apply display scale factor to touchpad"
+            android:title="将屏幕缩放应用于触控板"
             android:defaultValue="true"
             android:key="scaleTouchpad" />
 
         <SwitchPreferenceCompat
-            android:title="Show stylus click options"
-            android:summary="Stylus touch override, left middle or right click (Only for the stylus)"
+            android:title="显示手写笔点击选项"
+            android:summary="手写笔触控替代鼠标左键、中键或右键点击（仅适用于手写笔）"
             android:defaultValue="false"
             android:key="showStylusClickOverride" />
 
         <SwitchPreferenceCompat
-            android:title="Show mouse click helper overlay"
-            android:summary="Onscreen mouse buttons usable with touchpad"
+            android:title="显示鼠标点击位置"
+            android:summary="可在触控板上使用的屏幕鼠标按钮"
             android:defaultValue="false"
             android:key="showMouseHelper" />
 
         <SwitchPreferenceCompat
-            android:title="Capture external mouse when possible"
-            android:summary="Intercept all hardware mouse events. Pointer is back to Android after pressing Escape key."
+            android:title="在可能的情况下捕获外部鼠标"
+            android:summary="拦截所有硬件鼠标事件。按下Escape键后，指针返回Android系统。"
             android:defaultValue="false"
             android:key="pointerCapture" />
 
         <SwitchPreferenceCompat
-            android:title="Enable tap-to-move for touchpads"
+            android:title="启用触控板的轻击移动功能"
             android:defaultValue="false"
             android:key="tapToMove" />
     </PreferenceCategory>
     <PreferenceCategory android:key="kbd" android:title="Keyboard">
         <SwitchPreferenceCompat
-            android:title="Toggle keyboard using back key"
+            android:title="使用返回键切换键盘"
             android:defaultValue="true"
             android:key="toggleIMEUsingBackKey" />
 
         <SwitchPreferenceCompat
-            android:title="Show additional keyboard"
-            android:summary="Show keyboard with additional keys."
+            android:title="显示附加键盘"
+            android:summary="屏幕下方显示带有附加键的键盘"
             android:defaultValue="true"
             android:key="showAdditionalKbd" />
 
         <SwitchPreferenceCompat
-            android:title="Hide additional keyboard on Volume Down key press"
+            android:title="按下音量减小键时隐藏附加键盘"
             android:defaultValue="false"
             android:key="hideEKOnVolDown" />
 
         <SwitchPreferenceCompat
-            android:title="Show IME with external keyboard"
-            android:summary="Show software keyboard while hardware keyboard is connected. Requires WRITE_SECURE_SETTINGS permission."
+            android:title="使用外部键盘时显示软件键盘"
+            android:summary="在连接硬件键盘时显示软件键盘。需要WRITE_SECURE_SETTINGS权限。"
             android:defaultValue="false"
             android:key="showIMEWhileExternalConnected" />
 
         <SwitchPreferenceCompat
-            android:title="Prefer scancodes when possible"
-            android:summary="Let X server handle hardware keyboard layout (with DE settings or setxkbmap)."
+            android:title="在可能的情况下优先使用扫描码"
+            android:summary="让 X 服务器处理硬件键盘布局（使用桌面环境设置或 setxkbmap 命令）"
             android:defaultValue="false"
             android:key="preferScancodes"/>
 
         <SwitchPreferenceCompat
-            android:title="Intercept system shortcuts"
-            android:summary="Samsung Dex only. Allows interception of &quot;Alt+F4&quot;, &quot;Meta+D&quot;, &quot;Meta+E&quot;, etc. "
+            android:title="拦截系统快捷键"
+            android:summary="仅适用于Samsung Dex。允许拦截'Alt+F4'、'Meta+D'、'Meta+E'等快捷键。 "
             android:defaultValue="false"
             android:key="dexMetaKeyCapture" />
 
         <Preference
-            android:title="Enable Accessibility service for intercepting system shortcuts manually."
-            android:summary="Open Accessibility settings."
+            android:title="启用辅助功能服务以手动拦截系统快捷键。"
+            android:summary="打开辅助功能设置。"
             android:key="enableAccessibilityService" />
 
         <SwitchPreferenceCompat
-            android:title="Enable Accessibility service for intercepting system shortcuts automatically."
-            android:summary="Requires WRITE_SECURE_SETTINGS permission."
+            android:title="启用辅助功能服务以自动拦截系统快捷键。"
+            android:summary="需要WRITE_SECURE_SETTINGS权限。"
             android:defaultValue="false"
             android:key="enableAccessibilityServiceAutomatically" />
 
         <SwitchPreferenceCompat
-            android:title="Filter out intercepted Win (Meta/Mod4) key."
-            android:summary="Allows you to use Dex shortcuts while intercepting."
+            android:title="过滤掉拦截的 Win（Meta/Mod4）键。"
+            android:summary="允许在拦截的同时使用Dex快捷键。"
             android:defaultValue="false"
             android:key="filterOutWinkey" />
 
         <Preference
-            android:title="Extra keys config"
+            android:title="额外按键配置"
             android:key="extra_keys_config" />
     </PreferenceCategory>
 
     <PreferenceCategory android:key="other" android:title="Other">
         <SwitchPreferenceCompat
-            android:title="Automatic sync clipboard with Android"
+            android:title="与 Android 自动同步剪贴板"
             android:defaultValue="false"
             android:key="clipboardSync" />
 
         <Preference
-            android:title="Request notification permission"
+            android:title="请求通知权限"
             android:key="requestNotificationPermission" />
     </PreferenceCategory>
 </PreferenceScreen>
