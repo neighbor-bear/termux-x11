@@ -100,7 +100,7 @@ jobs:
 
     - name: Update Nightly Release
       uses: andelf/nightly-release@main
-      if: github.repository == 'termux/termux-x11' && github.ref == 'refs/heads/master'
+      if: github.repository == 'neighbor-bear/termux-x11' && github.ref == 'refs/heads/master'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
