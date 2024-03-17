@@ -105,11 +105,11 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         tag_name: nightly
-        name: 'Nightly Release $$'
+        name: '1.03.00 - $$'
         draft: false
         prerelease: false
         body: |
-          This is a nightly release of the termux-x11 app.
+          termux-x11中文版
           Based on ${{ github.sha }}
         files: |
           ./app/build/outputs/apk/debug/app-*-debug.apk
