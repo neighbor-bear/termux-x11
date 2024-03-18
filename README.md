@@ -27,7 +27,7 @@ Termux:X11是一个功能完备的X服务器。它使用Android NDK构建，并�
 ## 安装指南
 该应用程序仅适用于Android 8及更高版本的设备。为此，您必须启用`x11-repo`仓库，可以通过执行`pkg install x11-repo`命令来完成
 
-为了使X应用程序正常工作，您必须安装Termux-x11的配套包。您可以通过从最后一个成功构建(https://github.com/termux/termux-x11/actions/workflows/debug_build.yml) 中下载构建产物，并安装`termux-x11-*-debug.apk`（根据设备`architecture`选择，如果不确定，可以选择通用版本）以及`termux-companion packages`构建产物中的`*.deb`文件（如果您使用Termux的`pkg`包管理器）或`*.tar.xz`文件（如果您使用Termux的`pacman`包管理器）。请不要尝试将`shell-loader-nightly.apk`作为Android应用程序安装，它不是为了安装而设计的，仅供使用chroot的用户使用。
+为了使X应用程序正常工作，您必须安装Termux-x11的配套包。您可以通过从[最后一个成功构建](https://github.com/termux/termux-x11/actions/workflows/debug_build.yml) 中下载构建产物，并安装`termux-x11-*-debug.apk`（根据设备`architecture`选择，如果不确定，可以选择通用版本）以及`termux-companion packages`构建产物中的`*.deb`文件（如果您使用Termux的`pkg`包管理器）或`*.tar.xz`文件（如果您使用Termux的`pacman`包管理器）。请不要尝试将`shell-loader-nightly.apk`作为Android应用程序安装，它不是为了安装而设计的，仅供使用chroot的用户使用。
 或者，您可以从仓库中安装夜间版本的配套包，通过执行`pkg in x11-repo && pkg in termux-x11-nightly`命令来完成安装。
 
 ## 运行图形应用程序
