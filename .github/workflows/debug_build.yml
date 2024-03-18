@@ -109,7 +109,7 @@ jobs:
         draft: false
         prerelease: false
         body: |
-          termux-x11中文版
+          termux-x11-zh-cn
           Based on ${{ github.sha }}
         files: |
           ./app/build/outputs/apk/debug/app-*-debug.apk
