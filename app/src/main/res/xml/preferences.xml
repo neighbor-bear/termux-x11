@@ -96,6 +96,19 @@
             android:defaultValue="false"
             android:key="pointerCapture" />
 
+        <ListPreference
+            android:title="Transform captured pointer movements"
+            android:key="transformCapturedPointer"
+            android:defaultValue="no"
+            android:entries="@array/transformCapturedPointerEntries"
+            android:entryValues="@array/transformCapturedPointerValues" />
+
+        <SeekBarPreference
+            android:title="Captured pointer speed factor, %"
+            android:key="capturedPointerSpeedFactor"
+            android:max="200"
+            android:defaultValue="100" />
+
         <SwitchPreferenceCompat
             android:title="启用触控板的轻击移动功能"
             android:defaultValue="false"
@@ -162,7 +175,7 @@
         <SwitchPreferenceCompat
             android:title="与 Android 自动同步剪贴板"
             android:defaultValue="false"
-            android:key="clipboardSync" />
+            android:key="clipboardEnable" />
 
         <Preference
             android:title="请求通知权限"
